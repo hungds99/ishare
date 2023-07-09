@@ -1,12 +1,9 @@
-import Link from 'next/link';
+'use client';
 
-export default function Home() {
-  return (
-    <main>
-      <div>
-        <h1> Share your images </h1>
-        <Link href='/sign-in'>Go to sign in</Link>
-      </div>
-    </main>
-  );
+import withAuth from '@/hoc/withAuth';
+
+function Home() {
+  return <h1>hello from home page</h1>;
 }
+
+export default withAuth(Home);
